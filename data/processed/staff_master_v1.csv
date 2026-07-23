@@ -1,0 +1,446 @@
+﻿staff_id,staff_name,hospital_id,hospital_name,home_department,staff_category,job_title,employment_type,employment_start_date,employment_status,synthetic_flag
+STF0001,Daniel Mustafa,KPJ_01,JCORP Specialist Hospital,Emergency Department,Doctor,Medical Officer,Permanent,2022-06-01,Active,True
+STF0002,Rafiq Rahman,KPJ_01,JCORP Specialist Hospital,Emergency Department,Doctor,Consultant,Contract,2022-11-01,Active,True
+STF0003,Nabil Karim,KPJ_01,JCORP Specialist Hospital,Emergency Department,Doctor,Registrar,Contract,2020-08-01,Active,True
+STF0004,Jia Wei Hassan,KPJ_01,JCORP Specialist Hospital,Emergency Department,Doctor,Consultant,Permanent,2021-04-01,Active,True
+STF0005,Akmal Omar,KPJ_01,JCORP Specialist Hospital,Emergency Department,Doctor,Medical Officer,Permanent,2022-12-01,Active,True
+STF0006,Akmal Salleh,KPJ_01,JCORP Specialist Hospital,Emergency Department,Doctor,Registrar,Contract,2018-04-01,Active,True
+STF0007,Khairol Bakar,KPJ_01,JCORP Specialist Hospital,Emergency Department,Doctor,Consultant,Permanent,2024-01-01,Active,True
+STF0008,Danish Mustafa,KPJ_01,JCORP Specialist Hospital,Emergency Department,Doctor,Consultant,Contract,2024-07-01,Active,True
+STF0009,Arif Nair,KPJ_01,JCORP Specialist Hospital,Emergency Department,Doctor,Consultant,Permanent,2023-04-01,Active,True
+STF0010,Yasmin Abdullah,KPJ_01,JCORP Specialist Hospital,Emergency Department,Doctor,Consultant,Permanent,2021-06-01,Active,True
+STF0011,Izzah Abdullah,KPJ_01,JCORP Specialist Hospital,Emergency Department,Doctor,Registrar,Permanent,2023-04-01,Active,True
+STF0012,Liyana Ahmad,KPJ_01,JCORP Specialist Hospital,Emergency Department,Doctor,Medical Officer,Contract,2020-04-01,Active,True
+STF0013,Amira Wong,KPJ_01,JCORP Specialist Hospital,Emergency Department,Doctor,Registrar,Permanent,2024-03-01,Active,True
+STF0014,Alia Mahmud,KPJ_01,JCORP Specialist Hospital,Emergency Department,Doctor,Registrar,Permanent,2024-05-01,Active,True
+STF0015,Alia Aziz,KPJ_01,JCORP Specialist Hospital,Emergency Department,Doctor,Consultant,Permanent,2024-01-01,Active,True
+STF0016,Aina Chong,KPJ_01,JCORP Specialist Hospital,Emergency Department,Doctor,Registrar,Permanent,2024-06-01,Active,True
+STF0017,Arun Razak,KPJ_01,JCORP Specialist Hospital,Emergency Department,Doctor,Medical Officer,Contract,2020-04-01,Active,True
+STF0018,Danish Tan,KPJ_01,JCORP Specialist Hospital,Emergency Department,Doctor,Medical Officer,Permanent,2018-08-01,Active,True
+STF0019,Aiman Ismail,KPJ_01,JCORP Specialist Hospital,Emergency Department,Doctor,Medical Officer,Permanent,2022-10-01,Active,True
+STF0020,Sabrina Abdullah,KPJ_01,JCORP Specialist Hospital,Emergency Department,Doctor,Consultant,Permanent,2020-01-01,Active,True
+STF0021,Iman Singh,KPJ_01,JCORP Specialist Hospital,Emergency Department,Doctor,Medical Officer,Permanent,2024-03-01,Active,True
+STF0022,Sabrina Aziz,KPJ_01,JCORP Specialist Hospital,Emergency Department,Doctor,Consultant,Permanent,2019-06-01,Active,True
+STF0023,Syarifah Tan,KPJ_01,JCORP Specialist Hospital,Emergency Department,Doctor,Registrar,Permanent,2021-12-01,Active,True
+STF0024,Akmal Razak,KPJ_01,JCORP Specialist Hospital,Emergency Department,Doctor,Registrar,Permanent,2021-09-01,Active,True
+STF0025,Amira Omar,KPJ_01,JCORP Specialist Hospital,Emergency Department,Doctor,Registrar,Permanent,2023-09-01,Active,True
+STF0026,Danish Yap,KPJ_01,JCORP Specialist Hospital,Emergency Department,Doctor,Registrar,Permanent,2024-04-01,Active,True
+STF0027,Mei Ling Singh,KPJ_01,JCORP Specialist Hospital,Emergency Department,Doctor,Consultant,Permanent,2022-12-01,Active,True
+STF0028,Qistina Ismail,KPJ_01,JCORP Specialist Hospital,Emergency Department,Doctor,Consultant,Permanent,2020-10-01,Active,True
+STF0029,Haziq Chong,KPJ_01,JCORP Specialist Hospital,Emergency Department,Doctor,Registrar,Contract,2018-10-01,Active,True
+STF0030,Alia Chan,KPJ_01,JCORP Specialist Hospital,Emergency Department,Doctor,Consultant,Permanent,2018-02-01,Active,True
+STF0031,Rachel Devi,KPJ_01,JCORP Specialist Hospital,Emergency Department,Doctor,Registrar,Permanent,2024-05-01,Active,True
+STF0032,Arun Mohamed,KPJ_01,JCORP Specialist Hospital,Emergency Department,Doctor,Medical Officer,Permanent,2024-07-01,Active,True
+STF0033,Zulkifli Tan,KPJ_01,JCORP Specialist Hospital,Emergency Department,Doctor,Consultant,Permanent,2019-04-01,Active,True
+STF0034,Zahirah Daud,KPJ_01,JCORP Specialist Hospital,Emergency Department,Doctor,Medical Officer,Permanent,2022-03-01,Active,True
+STF0035,Zulkifli Karim,KPJ_01,JCORP Specialist Hospital,Emergency Department,Doctor,Consultant,Permanent,2022-02-01,Active,True
+STF0036,Nabil Ismail,KPJ_01,JCORP Specialist Hospital,Emergency Department,Doctor,Medical Officer,Permanent,2018-08-01,Active,True
+STF0037,Anis Mohamed,KPJ_01,JCORP Specialist Hospital,Emergency Department,Doctor,Registrar,Permanent,2024-05-01,Active,True
+STF0038,Amir Omar,KPJ_01,JCORP Specialist Hospital,Emergency Department,Doctor,Medical Officer,Permanent,2024-07-01,Active,True
+STF0039,Akmal Aziz,KPJ_01,JCORP Specialist Hospital,Emergency Department,Doctor,Registrar,Permanent,2020-12-01,Active,True
+STF0040,Wei Jian Chan,KPJ_01,JCORP Specialist Hospital,Emergency Department,Doctor,Medical Officer,Permanent,2019-01-01,Active,True
+STF0041,Nurul Razak,KPJ_01,JCORP Specialist Hospital,Emergency Department,Doctor,Medical Officer,Permanent,2018-04-01,Active,True
+STF0042,Mei Ling Lee,KPJ_01,JCORP Specialist Hospital,Emergency Department,Doctor,Medical Officer,Permanent,2021-01-01,Active,True
+STF0043,Yasmin Jamal,KPJ_01,JCORP Specialist Hospital,Emergency Department,Nurse,Staff Nurse,Permanent,2023-06-01,Active,True
+STF0044,Priya Wong,KPJ_01,JCORP Specialist Hospital,Emergency Department,Nurse,Charge Nurse,Permanent,2021-09-01,Active,True
+STF0045,Alia Omar,KPJ_01,JCORP Specialist Hospital,Emergency Department,Nurse,Charge Nurse,Permanent,2022-03-01,Active,True
+STF0046,Khairol Rahman,KPJ_01,JCORP Specialist Hospital,Emergency Department,Nurse,Senior Staff Nurse,Permanent,2022-02-01,Active,True
+STF0047,Aiman Lim,KPJ_01,JCORP Specialist Hospital,Emergency Department,Nurse,Charge Nurse,Contract,2023-03-01,Active,True
+STF0048,Syafiq Omar,KPJ_01,JCORP Specialist Hospital,Emergency Department,Nurse,Senior Staff Nurse,Permanent,2018-06-01,Active,True
+STF0049,Khairol Wong,KPJ_01,JCORP Specialist Hospital,Emergency Department,Nurse,Charge Nurse,Permanent,2019-11-01,Active,True
+STF0050,Alia Ali,KPJ_01,JCORP Specialist Hospital,Emergency Department,Nurse,Senior Staff Nurse,Permanent,2020-10-01,Active,True
+STF0051,Qistina Bakar,KPJ_01,JCORP Specialist Hospital,Emergency Department,Nurse,Senior Staff Nurse,Permanent,2018-11-01,Active,True
+STF0052,Liyana Rahman,KPJ_01,JCORP Specialist Hospital,Emergency Department,Nurse,Charge Nurse,Permanent,2024-05-01,Active,True
+STF0053,Zahirah Devi,KPJ_01,JCORP Specialist Hospital,Emergency Department,Nurse,Senior Staff Nurse,Permanent,2022-11-01,Active,True
+STF0054,Zahirah Abdullah,KPJ_01,JCORP Specialist Hospital,Emergency Department,Nurse,Charge Nurse,Permanent,2023-06-01,Active,True
+STF0055,Syarifah Ibrahim,KPJ_01,JCORP Specialist Hospital,Emergency Department,Nurse,Senior Staff Nurse,Permanent,2024-06-01,Active,True
+STF0056,Haziq Ismail,KPJ_01,JCORP Specialist Hospital,Emergency Department,Nurse,Charge Nurse,Permanent,2020-06-01,Active,True
+STF0057,Rafiq Bakar,KPJ_01,JCORP Specialist Hospital,Emergency Department,Nurse,Senior Staff Nurse,Permanent,2020-11-01,Active,True
+STF0058,Izzah Salleh,KPJ_01,JCORP Specialist Hospital,Emergency Department,Nurse,Staff Nurse,Permanent,2023-06-01,Active,True
+STF0059,Alia Abdullah,KPJ_01,JCORP Specialist Hospital,Emergency Department,Nurse,Charge Nurse,Permanent,2024-07-01,Active,True
+STF0060,Haziq Yap,KPJ_01,JCORP Specialist Hospital,Emergency Department,Nurse,Staff Nurse,Contract,2020-02-01,Active,True
+STF0061,Liyana Wong,KPJ_01,JCORP Specialist Hospital,Emergency Department,Nurse,Senior Staff Nurse,Permanent,2024-07-01,Active,True
+STF0062,Hana Ismail,KPJ_01,JCORP Specialist Hospital,Emergency Department,Nurse,Charge Nurse,Permanent,2022-03-01,Active,True
+STF0063,Amira Devi,KPJ_01,JCORP Specialist Hospital,Emergency Department,Nurse,Staff Nurse,Permanent,2022-03-01,Active,True
+STF0064,Liyana Daud,KPJ_01,JCORP Specialist Hospital,Emergency Department,Nurse,Senior Staff Nurse,Permanent,2023-09-01,Active,True
+STF0065,Amira Mustafa,KPJ_01,JCORP Specialist Hospital,Emergency Department,Nurse,Senior Staff Nurse,Permanent,2022-08-01,Active,True
+STF0066,Amira Razak,KPJ_01,JCORP Specialist Hospital,Emergency Department,Nurse,Senior Staff Nurse,Permanent,2020-03-01,Active,True
+STF0067,Nurul Salleh,KPJ_01,JCORP Specialist Hospital,Emergency Department,Nurse,Charge Nurse,Permanent,2023-12-01,Active,True
+STF0068,Kavitha Kumar,KPJ_01,JCORP Specialist Hospital,Emergency Department,Nurse,Charge Nurse,Permanent,2020-08-01,Active,True
+STF0069,Balqis Nair,KPJ_01,JCORP Specialist Hospital,Emergency Department,Nurse,Staff Nurse,Permanent,2020-05-01,Active,True
+STF0070,Daniel Daud,KPJ_01,JCORP Specialist Hospital,Emergency Department,Nurse,Senior Staff Nurse,Permanent,2018-11-01,Active,True
+STF0071,Akmal Lim,KPJ_01,JCORP Specialist Hospital,Emergency Department,Nurse,Charge Nurse,Permanent,2020-10-01,Active,True
+STF0072,Priya Lee,KPJ_01,JCORP Specialist Hospital,Emergency Department,Nurse,Charge Nurse,Contract,2020-01-01,Active,True
+STF0073,Syafiq Yap,KPJ_01,JCORP Specialist Hospital,Emergency Department,Nurse,Staff Nurse,Permanent,2023-07-01,Active,True
+STF0074,Amira Bakar,KPJ_01,JCORP Specialist Hospital,Emergency Department,Nurse,Charge Nurse,Permanent,2021-02-01,Active,True
+STF0075,Liyana Tan,KPJ_01,JCORP Specialist Hospital,Emergency Department,Nurse,Staff Nurse,Permanent,2024-07-01,Active,True
+STF0076,Alia Hassan,KPJ_01,JCORP Specialist Hospital,Emergency Department,Nurse,Staff Nurse,Permanent,2023-07-01,Active,True
+STF0077,Kavitha Chan,KPJ_01,JCORP Specialist Hospital,Emergency Department,Nurse,Senior Staff Nurse,Permanent,2021-12-01,Active,True
+STF0078,Hana Omar,KPJ_01,JCORP Specialist Hospital,Emergency Department,Nurse,Senior Staff Nurse,Permanent,2020-04-01,Active,True
+STF0079,Izzah Hassan,KPJ_01,JCORP Specialist Hospital,Emergency Department,Nurse,Staff Nurse,Permanent,2024-05-01,Active,True
+STF0080,Kavitha Wong,KPJ_01,JCORP Specialist Hospital,Emergency Department,Nurse,Senior Staff Nurse,Permanent,2024-02-01,Active,True
+STF0081,Khairol Razak,KPJ_01,JCORP Specialist Hospital,Emergency Department,Nurse,Charge Nurse,Permanent,2023-09-01,Active,True
+STF0082,Nurul Aziz,KPJ_01,JCORP Specialist Hospital,Emergency Department,Nurse,Senior Staff Nurse,Permanent,2021-05-01,Active,True
+STF0083,Arif Razak,KPJ_01,JCORP Specialist Hospital,Emergency Department,Nurse,Staff Nurse,Permanent,2019-05-01,Active,True
+STF0084,Nabil Lim,KPJ_01,JCORP Specialist Hospital,Emergency Department,Nurse,Staff Nurse,Contract,2023-02-01,Active,True
+STF0085,Daniel Bakar,KPJ_01,JCORP Specialist Hospital,Emergency Department,Nurse,Senior Staff Nurse,Contract,2020-05-01,Active,True
+STF0086,Liyana Ibrahim,KPJ_01,JCORP Specialist Hospital,Emergency Department,Nurse,Charge Nurse,Permanent,2022-11-01,Active,True
+STF0087,Jia Wei Kumar,KPJ_01,JCORP Specialist Hospital,Emergency Department,Nurse,Staff Nurse,Permanent,2020-10-01,Active,True
+STF0088,Farhan Jamal,KPJ_01,JCORP Specialist Hospital,Emergency Department,Nurse,Staff Nurse,Permanent,2020-02-01,Active,True
+STF0089,Daniel Ismail,KPJ_01,JCORP Specialist Hospital,Emergency Department,Nurse,Charge Nurse,Permanent,2023-06-01,Active,True
+STF0090,Qistina Lim,KPJ_01,JCORP Specialist Hospital,Emergency Department,Nurse,Senior Staff Nurse,Permanent,2018-07-01,Active,True
+STF0091,Syarifah Wong,KPJ_01,JCORP Specialist Hospital,Emergency Department,Nurse,Senior Staff Nurse,Permanent,2021-05-01,Active,True
+STF0092,Khairol Mustafa,KPJ_01,JCORP Specialist Hospital,Emergency Department,Nurse,Staff Nurse,Permanent,2019-05-01,Active,True
+STF0093,Danish Ng,KPJ_01,JCORP Specialist Hospital,Emergency Department,Nurse,Staff Nurse,Permanent,2023-06-01,Active,True
+STF0094,Khairol Ismail,KPJ_01,JCORP Specialist Hospital,Emergency Department,Nurse,Charge Nurse,Permanent,2021-12-01,Active,True
+STF0095,Anis Singh,KPJ_01,JCORP Specialist Hospital,Emergency Department,Nurse,Senior Staff Nurse,Contract,2022-04-01,Active,True
+STF0096,Wei Jian Bakar,KPJ_01,JCORP Specialist Hospital,Emergency Department,Nurse,Senior Staff Nurse,Permanent,2018-01-01,Active,True
+STF0097,Arun Yap,KPJ_01,JCORP Specialist Hospital,Emergency Department,Nurse,Staff Nurse,Contract,2022-06-01,Active,True
+STF0098,Amira Daud,KPJ_01,JCORP Specialist Hospital,Emergency Department,Nurse,Staff Nurse,Permanent,2021-06-01,Active,True
+STF0099,Nurul Kumar,KPJ_01,JCORP Specialist Hospital,Emergency Department,Nurse,Charge Nurse,Permanent,2019-02-01,Active,True
+STF0100,Kavitha Lee,KPJ_01,JCORP Specialist Hospital,Emergency Department,Nurse,Staff Nurse,Permanent,2019-08-01,Active,True
+STF0101,Aina Jamal,KPJ_01,JCORP Specialist Hospital,Emergency Department,Nurse,Senior Staff Nurse,Permanent,2018-10-01,Active,True
+STF0102,Balqis Wong,KPJ_01,JCORP Specialist Hospital,Emergency Department,Nurse,Staff Nurse,Permanent,2019-06-01,Active,True
+STF0103,Rafiq Devi,KPJ_01,JCORP Specialist Hospital,Emergency Department,Nurse,Staff Nurse,Permanent,2018-11-01,Active,True
+STF0104,Sabrina Yap,KPJ_01,JCORP Specialist Hospital,Emergency Department,Nurse,Senior Staff Nurse,Permanent,2023-06-01,Active,True
+STF0105,Syarifah Hassan,KPJ_01,JCORP Specialist Hospital,Emergency Department,Nurse,Senior Staff Nurse,Permanent,2023-11-01,Active,True
+STF0106,Qistina Daud,KPJ_01,JCORP Specialist Hospital,Emergency Department,Nurse,Charge Nurse,Permanent,2019-01-01,Active,True
+STF0107,Amira Abdullah,KPJ_01,JCORP Specialist Hospital,Emergency Department,Nurse,Staff Nurse,Permanent,2018-04-01,Active,True
+STF0108,Nabil Yap,KPJ_01,JCORP Specialist Hospital,Emergency Department,Nurse,Senior Staff Nurse,Permanent,2024-03-01,Active,True
+STF0109,Rachel Ali,KPJ_01,JCORP Specialist Hospital,Emergency Department,Nurse,Senior Staff Nurse,Permanent,2019-03-01,Active,True
+STF0110,Syarifah Lim,KPJ_01,JCORP Specialist Hospital,Emergency Department,Nurse,Senior Staff Nurse,Permanent,2020-06-01,Active,True
+STF0111,Amir Rahman,KPJ_01,JCORP Specialist Hospital,Emergency Department,Nurse,Senior Staff Nurse,Permanent,2023-05-01,Active,True
+STF0112,Zulkifli Lim,KPJ_01,JCORP Specialist Hospital,Emergency Department,Nurse,Senior Staff Nurse,Permanent,2022-11-01,Active,True
+STF0113,Aina Ahmad,KPJ_01,JCORP Specialist Hospital,Emergency Department,Nurse,Senior Staff Nurse,Permanent,2019-12-01,Active,True
+STF0114,Amira Salleh,KPJ_01,JCORP Specialist Hospital,Emergency Department,Nurse,Charge Nurse,Permanent,2021-06-01,Active,True
+STF0115,Arif Bakar,KPJ_01,JCORP Specialist Hospital,Emergency Department,Nurse,Staff Nurse,Permanent,2020-05-01,Active,True
+STF0116,Nurul Ng,KPJ_01,JCORP Specialist Hospital,Emergency Department,Nurse,Senior Staff Nurse,Permanent,2024-03-01,Active,True
+STF0117,Priya Kumar,KPJ_01,JCORP Specialist Hospital,Emergency Department,Nurse,Charge Nurse,Permanent,2022-01-01,Active,True
+STF0118,Syafiq Wong,KPJ_01,JCORP Specialist Hospital,Emergency Department,Nurse,Charge Nurse,Contract,2023-02-01,Active,True
+STF0119,Nadia Mustafa,KPJ_01,JCORP Specialist Hospital,Emergency Department,Nurse,Staff Nurse,Contract,2022-09-01,Active,True
+STF0120,Amir Singh,KPJ_01,JCORP Specialist Hospital,Emergency Department,Nurse,Senior Staff Nurse,Permanent,2023-09-01,Active,True
+STF0121,Danish Chong,KPJ_01,JCORP Specialist Hospital,Emergency Department,Nurse,Staff Nurse,Permanent,2020-08-01,Active,True
+STF0122,Zulkifli Daud,KPJ_01,JCORP Specialist Hospital,Emergency Department,Nurse,Senior Staff Nurse,Permanent,2021-06-01,Active,True
+STF0123,Hana Lim,KPJ_01,JCORP Specialist Hospital,Emergency Department,Nurse,Staff Nurse,Permanent,2022-05-01,Active,True
+STF0124,Zulkifli Mahmud,KPJ_01,JCORP Specialist Hospital,Emergency Department,Nurse,Senior Staff Nurse,Permanent,2019-05-01,Active,True
+STF0125,Akmal Tan,KPJ_01,JCORP Specialist Hospital,Emergency Department,Nurse,Charge Nurse,Permanent,2019-09-01,Active,True
+STF0126,Daniel Kumar,KPJ_01,JCORP Specialist Hospital,Emergency Department,Nurse,Senior Staff Nurse,Permanent,2021-09-01,Active,True
+STF0127,Arun Jamal,KPJ_01,JCORP Specialist Hospital,Emergency Department,Nurse,Staff Nurse,Permanent,2022-04-01,Active,True
+STF0128,Nurul Abdullah,KPJ_01,JCORP Specialist Hospital,Emergency Department,Nurse,Charge Nurse,Permanent,2019-07-01,Active,True
+STF0129,Sabrina Hassan,KPJ_01,JCORP Specialist Hospital,Emergency Department,Nurse,Senior Staff Nurse,Permanent,2021-07-01,Active,True
+STF0130,Daniel Karim,KPJ_01,JCORP Specialist Hospital,Emergency Department,Nurse,Staff Nurse,Permanent,2023-09-01,Active,True
+STF0131,Nadia Singh,KPJ_01,JCORP Specialist Hospital,Emergency Department,Allied Health,Pharmacist,Permanent,2020-06-01,Active,True
+STF0132,Sabrina Ali,KPJ_01,JCORP Specialist Hospital,Emergency Department,Allied Health,Physiotherapist,Permanent,2023-10-01,Active,True
+STF0133,Mei Ling Chong,KPJ_01,JCORP Specialist Hospital,Emergency Department,Allied Health,Radiographer,Permanent,2021-08-01,Active,True
+STF0134,Mei Ling Ng,KPJ_01,JCORP Specialist Hospital,Emergency Department,Allied Health,Assistant Medical Officer,Permanent,2023-05-01,Active,True
+STF0135,Nabil Hassan,KPJ_01,JCORP Specialist Hospital,Emergency Department,Allied Health,Physiotherapist,Permanent,2024-07-01,Active,True
+STF0136,Aiman Tan,KPJ_01,JCORP Specialist Hospital,Emergency Department,Allied Health,Radiographer,Permanent,2022-01-01,Active,True
+STF0137,Izzah Chong,KPJ_01,JCORP Specialist Hospital,Emergency Department,Allied Health,Assistant Medical Officer,Permanent,2023-02-01,Active,True
+STF0138,Balqis Bakar,KPJ_01,JCORP Specialist Hospital,Emergency Department,Allied Health,Radiographer,Permanent,2021-07-01,Active,True
+STF0139,Khairol Devi,KPJ_01,JCORP Specialist Hospital,Emergency Department,Allied Health,Physiotherapist,Contract,2024-01-01,Active,True
+STF0140,Iman Omar,KPJ_01,JCORP Specialist Hospital,Emergency Department,Allied Health,Radiographer,Permanent,2021-08-01,Active,True
+STF0141,Amira Yap,KPJ_01,JCORP Specialist Hospital,Emergency Department,Allied Health,Physiotherapist,Permanent,2021-09-01,Active,True
+STF0142,Qistina Ahmad,KPJ_01,JCORP Specialist Hospital,Emergency Department,Allied Health,Radiographer,Permanent,2019-10-01,Active,True
+STF0143,Daniel Singh,KPJ_01,JCORP Specialist Hospital,Emergency Department,Allied Health,Radiographer,Permanent,2023-11-01,Active,True
+STF0144,Akmal Chan,KPJ_01,JCORP Specialist Hospital,Emergency Department,Allied Health,Pharmacist,Permanent,2020-10-01,Active,True
+STF0145,Rachel Lim,KPJ_01,JCORP Specialist Hospital,Emergency Department,Allied Health,Radiographer,Permanent,2024-07-01,Active,True
+STF0146,Danish Ismail,KPJ_01,JCORP Specialist Hospital,Emergency Department,Allied Health,Radiographer,Permanent,2020-11-01,Active,True
+STF0147,Arif Salleh,KPJ_01,JCORP Specialist Hospital,Emergency Department,Allied Health,Assistant Medical Officer,Permanent,2024-01-01,Active,True
+STF0148,Rachel Nair,KPJ_01,JCORP Specialist Hospital,Emergency Department,Allied Health,Pharmacist,Permanent,2018-07-01,Active,True
+STF0149,Balqis Tan,KPJ_01,JCORP Specialist Hospital,Emergency Department,Allied Health,Assistant Medical Officer,Contract,2022-08-01,Active,True
+STF0150,Khairol Abdullah,KPJ_01,JCORP Specialist Hospital,Emergency Department,Allied Health,Radiographer,Permanent,2021-08-01,Active,True
+STF0151,Aina Hassan,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Doctor,Registrar,Permanent,2019-12-01,Active,True
+STF0152,Haziq Ahmad,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Doctor,Registrar,Permanent,2019-09-01,Active,True
+STF0153,Syarifah Karim,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Doctor,Consultant,Permanent,2023-06-01,Active,True
+STF0154,Mei Ling Tan,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Doctor,Registrar,Permanent,2022-04-01,Active,True
+STF0155,Nadia Omar,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Doctor,Medical Officer,Permanent,2019-12-01,Active,True
+STF0156,Nurul Mahmud,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Doctor,Registrar,Permanent,2024-07-01,Active,True
+STF0157,Arif Jamal,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Doctor,Registrar,Permanent,2023-10-01,Active,True
+STF0158,Nurul Mohamed,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Doctor,Consultant,Permanent,2019-03-01,Active,True
+STF0159,Amira Mohamed,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Doctor,Registrar,Permanent,2020-07-01,Active,True
+STF0160,Haziq Ibrahim,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Doctor,Consultant,Permanent,2018-03-01,Active,True
+STF0161,Farhan Singh,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Doctor,Medical Officer,Permanent,2022-04-01,Active,True
+STF0162,Farhan Bakar,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Doctor,Consultant,Contract,2021-10-01,Active,True
+STF0163,Rachel Daud,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Doctor,Medical Officer,Permanent,2021-06-01,Active,True
+STF0164,Khairol Hassan,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Doctor,Consultant,Permanent,2021-05-01,Active,True
+STF0165,Anis Bakar,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Doctor,Medical Officer,Permanent,2024-03-01,Active,True
+STF0166,Haziq Daud,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Doctor,Medical Officer,Permanent,2021-10-01,Active,True
+STF0167,Liyana Bakar,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Doctor,Registrar,Permanent,2022-08-01,Active,True
+STF0168,Iman Ismail,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Doctor,Consultant,Permanent,2023-05-01,Active,True
+STF0169,Aina Razak,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Doctor,Registrar,Permanent,2019-08-01,Active,True
+STF0170,Anis Nair,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Doctor,Consultant,Contract,2019-07-01,Active,True
+STF0171,Priya Ng,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Doctor,Registrar,Permanent,2020-01-01,Active,True
+STF0172,Nabil Jamal,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Doctor,Registrar,Permanent,2021-03-01,Active,True
+STF0173,Wei Jian Aziz,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Doctor,Consultant,Permanent,2021-11-01,Active,True
+STF0174,Mei Ling Ali,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Doctor,Consultant,Permanent,2018-06-01,Active,True
+STF0175,Syafiq Ismail,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Doctor,Medical Officer,Permanent,2024-07-01,Active,True
+STF0176,Hana Mustafa,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Doctor,Registrar,Permanent,2023-11-01,Active,True
+STF0177,Mei Ling Devi,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Doctor,Registrar,Contract,2021-02-01,Active,True
+STF0178,Amir Lee,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Doctor,Medical Officer,Permanent,2020-08-01,Active,True
+STF0179,Kavitha Ahmad,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Doctor,Consultant,Contract,2020-12-01,Active,True
+STF0180,Wei Jian Mahmud,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Doctor,Medical Officer,Permanent,2020-04-01,Active,True
+STF0181,Syafiq Mahmud,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Doctor,Consultant,Permanent,2022-09-01,Active,True
+STF0182,Zahirah Singh,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Doctor,Consultant,Permanent,2023-03-01,Active,True
+STF0183,Nadia Yap,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Doctor,Medical Officer,Permanent,2024-01-01,Active,True
+STF0184,Khairol Ahmad,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Doctor,Registrar,Permanent,2023-08-01,Active,True
+STF0185,Yasmin Lee,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Doctor,Registrar,Permanent,2021-01-01,Active,True
+STF0186,Aiman Jamal,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Doctor,Registrar,Permanent,2019-10-01,Active,True
+STF0187,Zulkifli Ismail,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Doctor,Registrar,Contract,2022-08-01,Active,True
+STF0188,Sabrina Chan,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Doctor,Registrar,Contract,2020-01-01,Active,True
+STF0189,Balqis Daud,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Doctor,Medical Officer,Permanent,2021-01-01,Active,True
+STF0190,Akmal Chong,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Doctor,Consultant,Permanent,2023-07-01,Active,True
+STF0191,Mei Ling Kumar,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Doctor,Registrar,Permanent,2024-04-01,Active,True
+STF0192,Nabil Ng,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Doctor,Medical Officer,Permanent,2024-05-01,Active,True
+STF0193,Zahirah Kumar,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Doctor,Consultant,Permanent,2024-05-01,Active,True
+STF0194,Iman Ali,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Doctor,Medical Officer,Permanent,2020-12-01,Active,True
+STF0195,Qistina Hassan,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Doctor,Medical Officer,Permanent,2020-08-01,Active,True
+STF0196,Wei Jian Tan,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Doctor,Registrar,Contract,2021-10-01,Active,True
+STF0197,Izzah Kumar,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Nurse,Staff Nurse,Contract,2020-11-01,Active,True
+STF0198,Farhan Kumar,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Nurse,Charge Nurse,Permanent,2024-02-01,Active,True
+STF0199,Aiman Mustafa,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Nurse,Charge Nurse,Permanent,2019-04-01,Active,True
+STF0200,Yasmin Tan,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Nurse,Senior Staff Nurse,Permanent,2020-08-01,Active,True
+STF0201,Aina Singh,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Nurse,Staff Nurse,Permanent,2021-04-01,Active,True
+STF0202,Aina Mahmud,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Nurse,Senior Staff Nurse,Permanent,2020-08-01,Active,True
+STF0203,Syarifah Kumar,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Nurse,Staff Nurse,Permanent,2024-02-01,Active,True
+STF0204,Hana Chong,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Nurse,Charge Nurse,Permanent,2019-03-01,Active,True
+STF0205,Nabil Kumar,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Nurse,Senior Staff Nurse,Permanent,2021-02-01,Active,True
+STF0206,Arif Yap,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Nurse,Staff Nurse,Permanent,2022-05-01,Active,True
+STF0207,Rachel Tan,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Nurse,Charge Nurse,Permanent,2018-08-01,Active,True
+STF0208,Arun Lee,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Nurse,Staff Nurse,Permanent,2024-06-01,Active,True
+STF0209,Kavitha Abdullah,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Nurse,Staff Nurse,Permanent,2021-06-01,Active,True
+STF0210,Balqis Rahman,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Nurse,Charge Nurse,Permanent,2020-10-01,Active,True
+STF0211,Haziq Tan,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Nurse,Staff Nurse,Permanent,2023-12-01,Active,True
+STF0212,Haziq Jamal,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Nurse,Staff Nurse,Permanent,2023-02-01,Active,True
+STF0213,Rafiq Lee,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Nurse,Senior Staff Nurse,Contract,2018-05-01,Active,True
+STF0214,Syarifah Singh,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Nurse,Staff Nurse,Contract,2019-05-01,Active,True
+STF0215,Qistina Nair,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Nurse,Charge Nurse,Permanent,2021-01-01,Active,True
+STF0216,Anis Razak,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Nurse,Senior Staff Nurse,Contract,2023-02-01,Active,True
+STF0217,Farhan Nair,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Nurse,Charge Nurse,Contract,2021-07-01,Active,True
+STF0218,Rafiq Ismail,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Nurse,Senior Staff Nurse,Permanent,2022-01-01,Active,True
+STF0219,Iman Salleh,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Nurse,Staff Nurse,Permanent,2024-01-01,Active,True
+STF0220,Wei Jian Mustafa,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Nurse,Senior Staff Nurse,Permanent,2022-02-01,Active,True
+STF0221,Alia Devi,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Nurse,Senior Staff Nurse,Permanent,2018-04-01,Active,True
+STF0222,Khairol Ng,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Nurse,Senior Staff Nurse,Permanent,2024-07-01,Active,True
+STF0223,Akmal Mustafa,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Nurse,Senior Staff Nurse,Permanent,2019-06-01,Active,True
+STF0224,Rafiq Daud,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Nurse,Charge Nurse,Permanent,2022-10-01,Active,True
+STF0225,Alia Chong,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Nurse,Charge Nurse,Permanent,2022-12-01,Active,True
+STF0226,Aiman Lee,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Nurse,Senior Staff Nurse,Permanent,2019-09-01,Active,True
+STF0227,Zulkifli Mustafa,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Nurse,Charge Nurse,Permanent,2018-08-01,Active,True
+STF0228,Akmal Mahmud,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Nurse,Senior Staff Nurse,Permanent,2022-12-01,Active,True
+STF0229,Syafiq Hassan,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Nurse,Senior Staff Nurse,Permanent,2021-01-01,Active,True
+STF0230,Nurul Mustafa,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Nurse,Charge Nurse,Contract,2019-12-01,Active,True
+STF0231,Wei Jian Lim,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Nurse,Charge Nurse,Permanent,2022-09-01,Active,True
+STF0232,Syafiq Devi,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Nurse,Senior Staff Nurse,Permanent,2020-09-01,Active,True
+STF0233,Rachel Omar,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Nurse,Staff Nurse,Permanent,2018-02-01,Active,True
+STF0234,Akmal Singh,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Nurse,Charge Nurse,Permanent,2018-08-01,Active,True
+STF0235,Rafiq Omar,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Nurse,Staff Nurse,Permanent,2021-04-01,Active,True
+STF0236,Aina Omar,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Nurse,Senior Staff Nurse,Permanent,2023-03-01,Active,True
+STF0237,Amira Ahmad,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Nurse,Senior Staff Nurse,Permanent,2020-01-01,Active,True
+STF0238,Zahirah Ng,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Nurse,Senior Staff Nurse,Permanent,2023-04-01,Active,True
+STF0239,Arun Hassan,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Nurse,Senior Staff Nurse,Permanent,2019-11-01,Active,True
+STF0240,Priya Jamal,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Nurse,Senior Staff Nurse,Permanent,2024-07-01,Active,True
+STF0241,Rachel Karim,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Nurse,Staff Nurse,Permanent,2020-10-01,Active,True
+STF0242,Kavitha Chong,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Nurse,Charge Nurse,Permanent,2021-04-01,Active,True
+STF0243,Daniel Razak,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Nurse,Charge Nurse,Contract,2019-05-01,Active,True
+STF0244,Nurul Chong,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Nurse,Staff Nurse,Contract,2023-07-01,Active,True
+STF0245,Yasmin Daud,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Nurse,Staff Nurse,Permanent,2020-12-01,Active,True
+STF0246,Qistina Ali,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Nurse,Charge Nurse,Permanent,2018-02-01,Active,True
+STF0247,Kavitha Mohamed,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Nurse,Charge Nurse,Permanent,2020-10-01,Active,True
+STF0248,Priya Chong,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Nurse,Staff Nurse,Permanent,2024-06-01,Active,True
+STF0249,Aina Karim,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Nurse,Charge Nurse,Permanent,2021-10-01,Active,True
+STF0250,Amira Mahmud,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Nurse,Staff Nurse,Permanent,2022-03-01,Active,True
+STF0251,Sabrina Mustafa,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Allied Health,Physiotherapist,Permanent,2019-09-01,Active,True
+STF0252,Amir Ibrahim,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Allied Health,Radiographer,Permanent,2024-03-01,Active,True
+STF0253,Zulkifli Mohamed,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Allied Health,Physiotherapist,Contract,2023-11-01,Active,True
+STF0254,Jia Wei Mustafa,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Allied Health,Physiotherapist,Permanent,2018-05-01,Active,True
+STF0255,Alia Mohamed,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Allied Health,Assistant Medical Officer,Permanent,2020-04-01,Active,True
+STF0256,Arif Wong,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Allied Health,Assistant Medical Officer,Permanent,2018-12-01,Active,True
+STF0257,Hana Jamal,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Allied Health,Pharmacist,Permanent,2020-10-01,Active,True
+STF0258,Danish Bakar,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Allied Health,Physiotherapist,Permanent,2023-03-01,Active,True
+STF0259,Mei Ling Daud,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Allied Health,Pharmacist,Permanent,2018-02-01,Active,True
+STF0260,Amir Aziz,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Allied Health,Radiographer,Permanent,2020-01-01,Active,True
+STF0261,Qistina Aziz,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Allied Health,Assistant Medical Officer,Contract,2020-11-01,Active,True
+STF0262,Zahirah Lim,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Allied Health,Assistant Medical Officer,Permanent,2019-08-01,Active,True
+STF0263,Priya Lim,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Allied Health,Radiographer,Permanent,2024-07-01,Active,True
+STF0264,Qistina Karim,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Allied Health,Physiotherapist,Permanent,2020-08-01,Active,True
+STF0265,Danish Kumar,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Allied Health,Physiotherapist,Permanent,2020-12-01,Active,True
+STF0266,Yasmin Mustafa,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Allied Health,Assistant Medical Officer,Permanent,2023-02-01,Active,True
+STF0267,Hana Yap,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Allied Health,Physiotherapist,Permanent,2023-10-01,Active,True
+STF0268,Aiman Salleh,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Allied Health,Pharmacist,Permanent,2023-12-01,Active,True
+STF0269,Yasmin Ali,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Allied Health,Physiotherapist,Permanent,2018-04-01,Active,True
+STF0270,Anis Daud,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Allied Health,Physiotherapist,Permanent,2020-07-01,Active,True
+STF0271,Nadia Jamal,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Allied Health,Pharmacist,Permanent,2022-10-01,Active,True
+STF0272,Arun Wong,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Allied Health,Radiographer,Permanent,2024-04-01,Active,True
+STF0273,Rachel Kumar,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Allied Health,Physiotherapist,Permanent,2024-07-01,Active,True
+STF0274,Arif Rahman,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Allied Health,Radiographer,Permanent,2020-08-01,Active,True
+STF0275,Balqis Mohamed,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Allied Health,Assistant Medical Officer,Permanent,2019-04-01,Active,True
+STF0276,Syarifah Jamal,KPJ_01,JCORP Specialist Hospital,Outpatient Department,Allied Health,Assistant Medical Officer,Contract,2023-02-01,Active,True
+STF0277,Haziq Mustafa,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Doctor,Medical Officer,Permanent,2024-04-01,Active,True
+STF0278,Priya Hassan,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Doctor,Medical Officer,Permanent,2020-06-01,Active,True
+STF0279,Anis Lim,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Doctor,Registrar,Permanent,2020-01-01,Active,True
+STF0280,Haziq Omar,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Doctor,Registrar,Permanent,2024-02-01,Active,True
+STF0281,Arif Mohamed,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Doctor,Medical Officer,Permanent,2019-11-01,Active,True
+STF0282,Arif Ng,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Doctor,Registrar,Permanent,2018-09-01,Active,True
+STF0283,Aiman Chong,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Doctor,Medical Officer,Permanent,2020-04-01,Active,True
+STF0284,Alia Kumar,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Doctor,Medical Officer,Permanent,2024-07-01,Active,True
+STF0285,Alia Bakar,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Doctor,Consultant,Permanent,2024-07-01,Active,True
+STF0286,Syafiq Ng,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Doctor,Medical Officer,Permanent,2018-01-01,Active,True
+STF0287,Alia Jamal,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Doctor,Consultant,Permanent,2020-08-01,Active,True
+STF0288,Anis Hassan,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Doctor,Medical Officer,Permanent,2023-06-01,Active,True
+STF0289,Iman Lim,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Doctor,Registrar,Permanent,2023-02-01,Active,True
+STF0290,Danish Nair,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Doctor,Consultant,Contract,2018-02-01,Active,True
+STF0291,Kavitha Razak,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Doctor,Consultant,Permanent,2022-09-01,Active,True
+STF0292,Balqis Mustafa,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Doctor,Medical Officer,Permanent,2021-06-01,Active,True
+STF0293,Amir Abdullah,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Doctor,Medical Officer,Permanent,2019-05-01,Active,True
+STF0294,Yasmin Mohamed,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Doctor,Consultant,Permanent,2021-10-01,Active,True
+STF0295,Amir Lim,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Doctor,Consultant,Permanent,2019-02-01,Active,True
+STF0296,Hana Mohamed,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Doctor,Medical Officer,Permanent,2020-08-01,Active,True
+STF0297,Izzah Yap,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Doctor,Consultant,Permanent,2024-07-01,Active,True
+STF0298,Farhan Ali,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Doctor,Medical Officer,Permanent,2021-03-01,Active,True
+STF0299,Farhan Ahmad,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Doctor,Medical Officer,Permanent,2021-09-01,Active,True
+STF0300,Nadia Wong,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Doctor,Medical Officer,Permanent,2020-12-01,Active,True
+STF0301,Yasmin Chan,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Doctor,Consultant,Permanent,2021-07-01,Active,True
+STF0302,Amira Ibrahim,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Doctor,Registrar,Permanent,2024-07-01,Active,True
+STF0303,Zahirah Rahman,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Doctor,Consultant,Permanent,2018-12-01,Active,True
+STF0304,Arif Lee,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Doctor,Consultant,Permanent,2019-04-01,Active,True
+STF0305,Rachel Aziz,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Doctor,Medical Officer,Permanent,2022-06-01,Active,True
+STF0306,Nurul Bakar,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Doctor,Registrar,Permanent,2021-12-01,Active,True
+STF0307,Farhan Lim,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Doctor,Registrar,Permanent,2020-11-01,Active,True
+STF0308,Arif Karim,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Doctor,Registrar,Permanent,2023-05-01,Active,True
+STF0309,Syafiq Razak,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Doctor,Registrar,Permanent,2023-09-01,Active,True
+STF0310,Priya Bakar,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Doctor,Registrar,Permanent,2019-09-01,Active,True
+STF0311,Arif Kumar,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Doctor,Consultant,Permanent,2018-02-01,Active,True
+STF0312,Hana Chan,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Senior Staff Nurse,Permanent,2020-02-01,Active,True
+STF0313,Syarifah Chong,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Staff Nurse,Contract,2022-03-01,Active,True
+STF0314,Syafiq Nair,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Staff Nurse,Permanent,2019-09-01,Active,True
+STF0315,Qistina Mahmud,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Senior Staff Nurse,Permanent,2018-02-01,Active,True
+STF0316,Haziq Abdullah,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Charge Nurse,Permanent,2022-06-01,Active,True
+STF0317,Hana Bakar,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Senior Staff Nurse,Permanent,2023-12-01,Active,True
+STF0318,Amir Yap,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Staff Nurse,Contract,2022-04-01,Active,True
+STF0319,Syarifah Ali,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Charge Nurse,Permanent,2020-11-01,Active,True
+STF0320,Qistina Ibrahim,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Staff Nurse,Permanent,2021-05-01,Active,True
+STF0321,Iman Ibrahim,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Senior Staff Nurse,Permanent,2018-08-01,Active,True
+STF0322,Nadia Aziz,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Charge Nurse,Permanent,2024-07-01,Active,True
+STF0323,Jia Wei Razak,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Staff Nurse,Permanent,2022-05-01,Active,True
+STF0324,Priya Nair,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Senior Staff Nurse,Permanent,2020-03-01,Active,True
+STF0325,Haziq Rahman,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Senior Staff Nurse,Permanent,2023-04-01,Active,True
+STF0326,Syafiq Daud,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Staff Nurse,Permanent,2023-04-01,Active,True
+STF0327,Daniel Devi,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Charge Nurse,Permanent,2022-06-01,Active,True
+STF0328,Zulkifli Lee,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Staff Nurse,Permanent,2023-05-01,Active,True
+STF0329,Haziq Hassan,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Staff Nurse,Permanent,2021-08-01,Active,True
+STF0330,Jia Wei Ng,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Senior Staff Nurse,Permanent,2023-03-01,Active,True
+STF0331,Liyana Salleh,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Charge Nurse,Permanent,2024-03-01,Active,True
+STF0332,Anis Yap,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Charge Nurse,Permanent,2022-04-01,Active,True
+STF0333,Zulkifli Yap,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Charge Nurse,Contract,2018-05-01,Active,True
+STF0334,Jia Wei Chong,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Senior Staff Nurse,Permanent,2024-07-01,Active,True
+STF0335,Balqis Singh,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Staff Nurse,Permanent,2018-07-01,Active,True
+STF0336,Akmal Daud,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Charge Nurse,Permanent,2024-02-01,Active,True
+STF0337,Zulkifli Rahman,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Senior Staff Nurse,Permanent,2020-07-01,Active,True
+STF0338,Aina Mohamed,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Senior Staff Nurse,Permanent,2019-05-01,Active,True
+STF0339,Liyana Kumar,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Charge Nurse,Permanent,2018-02-01,Active,True
+STF0340,Rachel Ng,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Senior Staff Nurse,Permanent,2018-01-01,Active,True
+STF0341,Danish Mohamed,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Staff Nurse,Permanent,2019-11-01,Active,True
+STF0342,Kavitha Singh,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Senior Staff Nurse,Permanent,2023-10-01,Active,True
+STF0343,Hana Devi,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Charge Nurse,Permanent,2019-07-01,Active,True
+STF0344,Arun Ibrahim,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Senior Staff Nurse,Permanent,2020-09-01,Active,True
+STF0345,Daniel Ibrahim,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Staff Nurse,Permanent,2020-05-01,Active,True
+STF0346,Amira Karim,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Senior Staff Nurse,Permanent,2024-06-01,Active,True
+STF0347,Mei Ling Chan,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Charge Nurse,Permanent,2023-11-01,Active,True
+STF0348,Amira Chan,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Charge Nurse,Contract,2019-05-01,Active,True
+STF0349,Jia Wei Mohamed,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Staff Nurse,Permanent,2019-04-01,Active,True
+STF0350,Nadia Rahman,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Staff Nurse,Permanent,2024-07-01,Active,True
+STF0351,Amir Wong,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Senior Staff Nurse,Permanent,2021-11-01,Active,True
+STF0352,Aina Mustafa,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Senior Staff Nurse,Permanent,2022-06-01,Active,True
+STF0353,Qistina Singh,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Senior Staff Nurse,Permanent,2020-02-01,Active,True
+STF0354,Anis Wong,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Senior Staff Nurse,Contract,2019-09-01,Active,True
+STF0355,Nadia Lim,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Charge Nurse,Permanent,2023-02-01,Active,True
+STF0356,Anis Jamal,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Senior Staff Nurse,Permanent,2020-05-01,Active,True
+STF0357,Rachel Salleh,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Staff Nurse,Permanent,2024-06-01,Active,True
+STF0358,Jia Wei Mahmud,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Senior Staff Nurse,Permanent,2023-07-01,Active,True
+STF0359,Jia Wei Nair,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Staff Nurse,Contract,2018-06-01,Active,True
+STF0360,Mei Ling Aziz,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Staff Nurse,Permanent,2024-07-01,Active,True
+STF0361,Liyana Singh,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Senior Staff Nurse,Permanent,2023-11-01,Active,True
+STF0362,Aina Wong,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Senior Staff Nurse,Permanent,2019-07-01,Active,True
+STF0363,Balqis Ibrahim,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Senior Staff Nurse,Permanent,2023-01-01,Active,True
+STF0364,Hana Tan,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Staff Nurse,Permanent,2018-02-01,Active,True
+STF0365,Qistina Omar,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Senior Staff Nurse,Permanent,2021-07-01,Active,True
+STF0366,Aiman Bakar,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Senior Staff Nurse,Permanent,2018-01-01,Active,True
+STF0367,Amira Nair,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Staff Nurse,Permanent,2019-10-01,Active,True
+STF0368,Sabrina Razak,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Charge Nurse,Permanent,2019-09-01,Active,True
+STF0369,Daniel Aziz,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Staff Nurse,Contract,2023-09-01,Active,True
+STF0370,Sabrina Rahman,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Senior Staff Nurse,Permanent,2021-11-01,Active,True
+STF0371,Rafiq Razak,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Charge Nurse,Permanent,2018-04-01,Active,True
+STF0372,Amir Mustafa,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Senior Staff Nurse,Permanent,2024-07-01,Active,True
+STF0373,Amira Lim,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Senior Staff Nurse,Permanent,2019-07-01,Active,True
+STF0374,Zahirah Ali,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Charge Nurse,Permanent,2023-12-01,Active,True
+STF0375,Anis Omar,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Staff Nurse,Permanent,2024-07-01,Active,True
+STF0376,Wei Jian Chong,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Senior Staff Nurse,Permanent,2019-01-01,Active,True
+STF0377,Jia Wei Ali,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Charge Nurse,Permanent,2021-10-01,Active,True
+STF0378,Jia Wei Abdullah,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Staff Nurse,Permanent,2021-02-01,Active,True
+STF0379,Iman Devi,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Staff Nurse,Permanent,2018-07-01,Active,True
+STF0380,Zulkifli Nair,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Charge Nurse,Permanent,2023-01-01,Active,True
+STF0381,Zahirah Ibrahim,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Senior Staff Nurse,Permanent,2019-02-01,Active,True
+STF0382,Khairol Aziz,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Staff Nurse,Permanent,2019-04-01,Active,True
+STF0383,Sabrina Bakar,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Staff Nurse,Permanent,2021-12-01,Active,True
+STF0384,Sabrina Chong,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Staff Nurse,Permanent,2020-07-01,Active,True
+STF0385,Hana Singh,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Staff Nurse,Permanent,2024-07-01,Active,True
+STF0386,Haziq Karim,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Charge Nurse,Permanent,2023-07-01,Active,True
+STF0387,Qistina Lee,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Senior Staff Nurse,Permanent,2019-02-01,Active,True
+STF0388,Akmal Devi,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Senior Staff Nurse,Permanent,2020-02-01,Active,True
+STF0389,Farhan Chong,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Staff Nurse,Permanent,2022-05-01,Active,True
+STF0390,Danish Singh,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Staff Nurse,Permanent,2023-01-01,Active,True
+STF0391,Izzah Rahman,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Staff Nurse,Permanent,2024-05-01,Active,True
+STF0392,Balqis Abdullah,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Charge Nurse,Contract,2019-06-01,Active,True
+STF0393,Khairol Kumar,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Senior Staff Nurse,Permanent,2020-04-01,Active,True
+STF0394,Zulkifli Razak,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Staff Nurse,Contract,2023-09-01,Active,True
+STF0395,Rachel Bakar,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Senior Staff Nurse,Permanent,2018-08-01,Active,True
+STF0396,Kavitha Tan,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Charge Nurse,Permanent,2023-10-01,Active,True
+STF0397,Nabil Ibrahim,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Senior Staff Nurse,Permanent,2021-03-01,Active,True
+STF0398,Qistina Wong,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Staff Nurse,Permanent,2021-04-01,Active,True
+STF0399,Zulkifli Ali,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Charge Nurse,Permanent,2023-09-01,Active,True
+STF0400,Qistina Rahman,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Charge Nurse,Contract,2020-03-01,Active,True
+STF0401,Zahirah Razak,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Staff Nurse,Permanent,2020-09-01,Active,True
+STF0402,Iman Abdullah,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Charge Nurse,Permanent,2023-07-01,Active,True
+STF0403,Hana Ali,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Charge Nurse,Permanent,2024-07-01,Active,True
+STF0404,Farhan Yap,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Senior Staff Nurse,Permanent,2022-04-01,Active,True
+STF0405,Akmal Nair,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Charge Nurse,Permanent,2023-08-01,Active,True
+STF0406,Yasmin Yap,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Staff Nurse,Permanent,2020-06-01,Active,True
+STF0407,Qistina Mohamed,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Staff Nurse,Permanent,2024-05-01,Active,True
+STF0408,Kavitha Jamal,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Staff Nurse,Permanent,2022-01-01,Active,True
+STF0409,Priya Tan,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Charge Nurse,Permanent,2024-03-01,Active,True
+STF0410,Arun Lim,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Charge Nurse,Permanent,2020-02-01,Active,True
+STF0411,Zulkifli Ng,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Charge Nurse,Permanent,2019-12-01,Active,True
+STF0412,Danish Devi,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Staff Nurse,Permanent,2018-03-01,Active,True
+STF0413,Aiman Omar,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Charge Nurse,Permanent,2023-02-01,Active,True
+STF0414,Anis Ng,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Staff Nurse,Contract,2021-07-01,Active,True
+STF0415,Yasmin Devi,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Staff Nurse,Permanent,2023-04-01,Active,True
+STF0416,Yasmin Lim,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Senior Staff Nurse,Contract,2021-12-01,Active,True
+STF0417,Daniel Mahmud,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Charge Nurse,Permanent,2018-06-01,Active,True
+STF0418,Wei Jian Salleh,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Senior Staff Nurse,Permanent,2022-01-01,Active,True
+STF0419,Zulkifli Abdullah,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Charge Nurse,Permanent,2019-04-01,Active,True
+STF0420,Syarifah Mustafa,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Senior Staff Nurse,Permanent,2021-07-01,Active,True
+STF0421,Sabrina Singh,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Nurse,Staff Nurse,Permanent,2018-09-01,Active,True
+STF0422,Danish Daud,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Allied Health,Radiographer,Permanent,2021-12-01,Active,True
+STF0423,Zahirah Mahmud,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Allied Health,Assistant Medical Officer,Permanent,2022-11-01,Active,True
+STF0424,Syarifah Nair,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Allied Health,Pharmacist,Contract,2022-05-01,Active,True
+STF0425,Anis Ahmad,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Allied Health,Pharmacist,Permanent,2024-04-01,Active,True
+STF0426,Syafiq Mustafa,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Allied Health,Assistant Medical Officer,Permanent,2020-01-01,Active,True
+STF0427,Arun Singh,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Allied Health,Pharmacist,Permanent,2022-10-01,Active,True
+STF0428,Rafiq Lim,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Allied Health,Physiotherapist,Permanent,2021-04-01,Active,True
+STF0429,Hana Ahmad,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Allied Health,Radiographer,Permanent,2020-01-01,Active,True
+STF0430,Nabil Abdullah,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Allied Health,Physiotherapist,Permanent,2022-02-01,Active,True
+STF0431,Iman Daud,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Allied Health,Assistant Medical Officer,Permanent,2022-09-01,Active,True
+STF0432,Nadia Abdullah,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Allied Health,Physiotherapist,Permanent,2020-11-01,Active,True
+STF0433,Balqis Lee,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Allied Health,Pharmacist,Permanent,2024-07-01,Active,True
+STF0434,Sabrina Lim,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Allied Health,Assistant Medical Officer,Permanent,2021-04-01,Active,True
+STF0435,Izzah Lim,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Allied Health,Assistant Medical Officer,Permanent,2021-10-01,Active,True
+STF0436,Danish Abdullah,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Allied Health,Physiotherapist,Contract,2023-03-01,Active,True
+STF0437,Aina Lim,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Allied Health,Pharmacist,Permanent,2018-01-01,Active,True
+STF0438,Iman Chong,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Allied Health,Pharmacist,Permanent,2024-07-01,Active,True
+STF0439,Liyana Abdullah,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Allied Health,Physiotherapist,Permanent,2024-07-01,Active,True
+STF0440,Nadia Karim,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Allied Health,Physiotherapist,Permanent,2018-06-01,Active,True
+STF0441,Liyana Lim,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Allied Health,Radiographer,Permanent,2021-04-01,Active,True
+STF0442,Danish Salleh,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Allied Health,Assistant Medical Officer,Permanent,2020-07-01,Active,True
+STF0443,Mei Ling Yap,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Allied Health,Radiographer,Permanent,2023-01-01,Active,True
+STF0444,Priya Chan,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Allied Health,Physiotherapist,Contract,2019-06-01,Active,True
+STF0445,Aiman Ahmad,KPJ_01,JCORP Specialist Hospital,Inpatient Wards,Allied Health,Physiotherapist,Permanent,2022-03-01,Active,True
