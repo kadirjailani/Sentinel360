@@ -26,7 +26,8 @@ Sentinel360/
 │   ├── generate_kpi_warning_output_v1.py       # Stage 1 — warnings, streaks, anomalies, alert priority
 │   ├── generate_cross_domain_signal_output_v1.py  # Stage 2 — domain scores, signal patterns, risk score
 │   ├── generate_kpi_forecast_output_v1.py      # Stage 3 — 1–3 month transparent forecast
-│   └── generate_executive_risk_ranking_v1.py   # Stage 4 — executive priority ranking of the 6 KPIs
+│   ├── generate_executive_risk_ranking_v1.py   # Stage 4 — executive priority ranking of the 6 KPIs
+│   └── simulate_scenario_v1.py                 # Live what-if engine for the Scenario Lab (no CSV outputs read)
 ├── config/
 │   ├── kpi_config_v2.csv                       # KPI definitions, thresholds, formulas, limitations
 │   └── scenario_baselines_v1.csv               # Scenario parameters (Staffing Pressure, Capacity Disruption)
@@ -87,17 +88,28 @@ Every output row includes its evidence sources, data-quality status, and an expl
 `app.py` is a read-only Streamlit app over `outputs/` — it never recalculates results. Five pages:
 
 - **Executive Overview** — implemented: latest-month status, ranking, and signals
-- **Warning Evidence**, **Forecast**, **Scenario Lab**, **Data & Validation** — placeholders, content coming soon
+- **Warning Evidence** — implemented: per-KPI monthly trend against Warning/Critical boundaries, latest evidence metrics (status, alert priority, anomaly flag, streaks), alert explanation, and the full monthly evidence table — all values read directly from the approved output files, nothing recalculated
+- **Forecast** — implemented: per-KPI actual history with central forecast and prediction bounds, per-month forecast detail (status, direction, risk, confidence, threshold crossing), forecast message and recommended attention — all read from the approved forecast output, nothing recalculated
+- **Scenario Lab** — implemented: live what-if simulation (see below)
+- **Data & Validation** — implemented: read-only file inventory (availability, row/column counts, duplicate-key checks, reporting-month coverage, data-quality counts, output generation timestamps), ground-truth note, and an in-memory upload preview with required-column checking — nothing on this page writes or modifies project files
 
-The Scenario Lab will use `config/scenario_baselines_v1.csv`, which defines two what-if scenarios: **Clinical Staffing Pressure** (`STAFF_PRESSURE`) and **Facility Capacity Disruption** (`CAPACITY_DISRUPTION`).
+### Scenario Lab
+
+The one exception to the read-only rule: the Scenario Lab computes live. It loads the two approved scenarios — **Clinical Staffing Pressure** (`STAFF_PRESSURE`) and **Facility Capacity Disruption** (`CAPACITY_DISRUPTION`) — from `config/scenario_baselines_v1.csv`, renders sliders for each parameter (with Baseline / No-intervention / With-mitigation presets), and calls `analytics/simulate_scenario_v1.py` on every change. That engine reuses the forecast math imported directly from `generate_kpi_forecast_output_v1.py` to build a live one-month-ahead baseline, then applies a transparent linear coefficient table (`IMPACT_COEFFICIENTS`) scaled by scenario duration. It shows baseline vs scenario status per KPI plus an estimated mitigation cost. Coefficients are illustrative prototype assumptions — adjust them in `IMPACT_COEFFICIENTS`.
+
+Run `python analytics/simulate_scenario_v1.py` for the engine's assert-based self-check.
 
 ## Getting started
 
-Requires Python 3.10+ with `pandas`, `numpy`, and `streamlit`:
+Requires Python 3.10+.
 
 ```bash
-pip install pandas numpy streamlit
+python -m venv .venv
+.venv\Scripts\activate        # Windows
+pip install -r requirements.txt
 ```
+
+`requirements.txt` pins the direct dependencies; `requirements.lock.txt` is the full `pip freeze` (node-lock equivalent) for exact reproduction.
 
 Regenerate outputs (only needed if inputs change — the repo ships with pre-computed outputs), in order:
 
@@ -107,7 +119,6 @@ python analytics/generate_cross_domain_signal_output_v1.py
 python analytics/generate_kpi_forecast_output_v1.py
 python analytics/generate_executive_risk_ranking_v1.py
 ```
-
 Launch the dashboard from the project root:
 
 ```bash

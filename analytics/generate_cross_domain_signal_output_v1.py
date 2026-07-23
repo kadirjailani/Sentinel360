@@ -9,9 +9,15 @@ then writes cross_domain_signal_output_v1.csv.
 Author: Sentinel360 prototype team
 """
 
+import sys
+
 import pandas as pd
 import numpy as np
 from pathlib import Path
+
+# Windows consoles default to cp1252, which cannot print the → / ✓ progress glyphs
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8")
 
 
 # ──────────────────────────────────────────────────────────
