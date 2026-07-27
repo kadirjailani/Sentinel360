@@ -106,6 +106,13 @@ def img_data_uri(name: str) -> str:
     return "data:image/png;base64," + base64.b64encode(data).decode()
 
 
+def render_grid(df: pd.DataFrame) -> None:
+    """Render a DataFrame as a borderless zebra table inside a squircle card."""
+    html_table = df.fillna("").to_html(index=False, border=0,
+                                       classes="rank-table", escape=False)
+    st.markdown(f"<div class='rank-card'>{html_table}</div>", unsafe_allow_html=True)
+
+
 def inject_theme() -> None:
     """White floating squircle cards, plus rounded clipping for charts."""
     st.markdown(
@@ -154,6 +161,9 @@ def inject_theme() -> None:
         [data-testid="stMain"] h5 { font-size: 18px !important; }
         [data-testid="stMain"] p,
         [data-testid="stMain"] li { font-size: 16px; }
+        /* 60px spacing above each section heading (page title excluded) */
+        [data-testid="stMain"] [data-testid="stHeading"] { margin-top: 60px; }
+        [data-testid="stMain"] [data-testid="stHeading"]:has(h1) { margin-top: 0; }
         /* Current KPI Status cards */
         .kpi-card {
             background: #FFFFFF;
@@ -503,6 +513,7 @@ def page_executive_overview(data: dict) -> None:
     render_risk_trend_chart(cross)
 
     warn_uri = img_data_uri("warning.png")
+    note_uri = img_data_uri("note.png")
     st.markdown(
         "<style>"
         f".st-key-risk_card,.st-key-risk_card [data-testid='stVerticalBlockBorderWrapper']{{"
@@ -513,6 +524,10 @@ def page_executive_overview(data: dict) -> None:
         "{background:transparent !important;border:none !important;padding:0.35rem 0;}"
         ".st-key-risk_card [data-testid='stMetricValue']"
         "{white-space:normal !important;overflow-wrap:anywhere;text-wrap:auto;line-height:1.2;}"
+        f".st-key-interp_card,.st-key-interp_card [data-testid='stVerticalBlockBorderWrapper']{{"
+        f"background-image:url('{note_uri}') !important;background-repeat:no-repeat !important;"
+        "background-position:right -20px bottom -20px !important;background-size:240px !important;"
+        "background-color:transparent !important;padding-right:30% !important;}"
         "</style>",
         unsafe_allow_html=True,
     )
@@ -526,7 +541,7 @@ def page_executive_overview(data: dict) -> None:
                 st.metric("Risk Level", f"{RISK_COLOUR.get(risk_level, '')} {risk_level}")
                 st.metric("Signal Pattern", pattern_name)
         with interp_col:
-            with st.container(border=True):
+            with st.container(border=True, key="interp_card"):
                 st.markdown("### Management Interpretation")
                 st.write(mgmt_interp)
     st.divider()
@@ -934,16 +949,16 @@ def page_data_validation(data: dict) -> None:
     scan = scan_project_files()
 
     st.subheader("File Availability & Structure")
-    st.dataframe(scan["checklist"], width="stretch", hide_index=True)
+    render_grid(scan["checklist"])
 
     st.subheader("Reporting-Month Coverage")
-    st.dataframe(scan["coverage"], width="stretch", hide_index=True)
+    render_grid(scan["coverage"])
 
     st.subheader("Data-Quality Status Counts")
-    st.dataframe(scan["quality"], width="stretch", hide_index=True)
+    render_grid(scan["quality"])
 
     st.subheader("Latest Output Generation")
-    st.dataframe(scan["outputs_status"], width="stretch", hide_index=True)
+    render_grid(scan["outputs_status"])
     st.caption("Regenerate outputs by running the four analytics scripts; "
                "this page refreshes its scan every five minutes.")
 
@@ -986,7 +1001,7 @@ def page_data_validation(data: dict) -> None:
     st.markdown(f"**`{uploaded.name}`** — {len(df_up):,} rows × "
                 f"{len(df_up.columns)} columns")
     st.markdown("**Preview (first 10 rows)**")
-    st.dataframe(df_up.head(10), width="stretch", hide_index=True)
+    render_grid(df_up.head(10))
     with st.expander(f"Detected columns ({len(df_up.columns)})"):
         st.write(list(df_up.columns))
 
