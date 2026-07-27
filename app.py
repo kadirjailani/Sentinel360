@@ -9,12 +9,14 @@ Run from the project root:
     streamlit run app.py
 """
 
+import base64
 import sys
 from datetime import datetime
 from pathlib import Path
 
 import streamlit as st
 import pandas as pd
+import altair as alt
 
 # streamlit run prepends this dir to sys.path, but other runners
 # (AppTest, pytest) do not — make the analytics import work everywhere
@@ -34,6 +36,7 @@ st.set_page_config(
 )
 
 BASE_DIR = Path(__file__).parent.resolve()
+ASSETS_DIR = BASE_DIR / "assets"
 
 OUTPUT_FILES = {
     "warning":     BASE_DIR / "outputs" / "kpi_warning_output_v1.csv",
@@ -86,6 +89,207 @@ MONTH_COLUMNS = {
     "kpi_forecast_output_v1.csv": "forecast_month",
     "executive_risk_ranking_v1.csv": "ranking_as_of_month",
 }
+
+
+# ──────────────────────────────────────────────────────────────────────────────
+# THEME  (light-blue squircle look; config.toml sets colours + base radius)
+# ──────────────────────────────────────────────────────────────────────────────
+
+# Dark headline-chart background so the main graph stands out against the page.
+CHART_BG = "#0E1526"
+
+
+@st.cache_data(show_spinner=False)
+def img_data_uri(name: str) -> str:
+    """Base64 data URI for a small image in assets/ (for CSS backgrounds)."""
+    data = (ASSETS_DIR / name).read_bytes()
+    return "data:image/png;base64," + base64.b64encode(data).decode()
+
+
+def inject_theme() -> None:
+    """White floating squircle cards, plus rounded clipping for charts."""
+    st.markdown(
+        """
+        <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap');
+        /* Fonts: Space Mono for titles, Plus Jakarta Sans for body */
+        html, body,
+        [data-testid="stAppViewContainer"],
+        [data-testid="stSidebar"] {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Space Mono', monospace !important;
+        }
+        /* Bordered containers -> white floating squircle cards */
+        [data-testid="stVerticalBlockBorderWrapper"] {
+            background: #FFFFFF;
+            border-radius: 1.75rem;
+            border: 1px solid #E3ECF7 !important;
+            box-shadow: 0 6px 20px rgba(30, 64, 120, 0.07);
+        }
+        /* Metrics -> soft light-blue squircle tiles */
+        [data-testid="stMetric"] {
+            background: #FFFFFF;
+            border: 1px solid #E9F0F9;
+            border-radius: 1.25rem;
+            padding: 0.9rem 1.1rem;
+        }
+        /* Right-aligned reporting-month pill */
+        .month-pill {
+            background: transparent;
+            border-radius: 999px;
+            padding: 0.4rem 1rem;
+            box-shadow: 0 2px 8px rgba(30, 64, 120, 0.08);
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #0E1526;
+            white-space: nowrap;
+        }
+        /* Type scale (main area only — leaves the sidebar untouched) */
+        [data-testid="stMain"] h1 { font-size: 54px !important; font-weight: 700; line-height: 1.1; }
+        [data-testid="stMain"] h2 { font-size: 36px !important; }
+        [data-testid="stMain"] h3 { font-size: 28px !important; }
+        [data-testid="stMain"] h4 { font-size: 22px !important; }
+        [data-testid="stMain"] h5 { font-size: 18px !important; }
+        [data-testid="stMain"] p,
+        [data-testid="stMain"] li { font-size: 16px; }
+        /* Current KPI Status cards */
+        .kpi-card {
+            background: #FFFFFF;
+            border: 1px solid #E3ECF7;
+            border-radius: 1.75rem;
+            box-shadow: 0 6px 20px rgba(30, 64, 120, 0.07);
+            padding: 1.6rem 1.8rem;
+            min-height: 260px;
+            margin-bottom: 15px;
+        }
+        .kpi-card .kpi-title { font-size: 18px; font-weight: 700; color: #0E1526; }
+        .kpi-card .kpi-domain { font-size: 14px; color: #5A6474; margin-top: 0.25rem; }
+        .kpi-card .kpi-value {
+            font-family: 'Space Mono', monospace;
+            font-size: 60px; font-weight: 700; color: #0E1526;
+            line-height: 1; margin: 1.3rem 0 1.7rem;
+        }
+        .kpi-card .kpi-line { font-size: 15px; color: #0E1526; margin-top: 0.25rem; }
+        /* Priority Ranking table -> white squircle card, no lines, zebra rows */
+        .rank-card {
+            background: #FFFFFF;
+            border: 1px solid #E3ECF7;
+            border-radius: 1.75rem;
+            box-shadow: 0 6px 20px rgba(30, 64, 120, 0.07);
+            padding: 0.75rem 1.5rem 1.25rem;
+            overflow-x: auto;
+        }
+        .rank-table { width: 100%; border-collapse: collapse; font-size: 15px; }
+        .rank-table th {
+            text-align: left; font-weight: 700; color: #5A6474;
+            padding: 16px; border: none !important;
+        }
+        .rank-table td {
+            padding: 18px 16px; border: none !important; color: #0E1526;
+        }
+        .rank-table tbody tr:nth-child(even) td { background: #F4F8FF; }
+        .rank-table, .rank-table thead, .rank-table tbody, .rank-table tr,
+        .rank-table thead th { border: none !important; }
+        /* Equal-height native cards in a columns row (scoped by container key) */
+        .st-key-alert_cards [data-testid="stHorizontalBlock"],
+        .st-key-risk_row [data-testid="stHorizontalBlock"] { align-items: stretch; }
+        .st-key-alert_cards [data-testid="stColumn"],
+        .st-key-risk_row [data-testid="stColumn"] { display: flex; flex-direction: column; }
+        .st-key-alert_cards [data-testid="stColumn"] [data-testid="stVerticalBlockBorderWrapper"] {
+            height: 100%; padding: 2rem 2.25rem;
+        }
+        .st-key-risk_row [data-testid="stColumn"] > [data-testid="stVerticalBlock"] {
+            height: 100%; display: flex; flex-direction: column;
+        }
+        .st-key-risk_row [data-testid="stColumn"] > [data-testid="stVerticalBlock"] > * { flex: 1 1 auto; }
+        .st-key-risk_row [data-testid="stColumn"] [data-testid="stVerticalBlockBorderWrapper"] { height: 100%; }
+        /* Recommendation card -> dark bg, light-blue title, white body */
+        .st-key-rec_card,
+        .st-key-rec_card [data-testid="stVerticalBlockBorderWrapper"] {
+            background: #0E1526 !important;
+            border-color: #0E1526 !important;
+        }
+        .st-key-rec_card h3 { color: #4DA3FF !important; }
+        .st-key-rec_card [data-testid="stMarkdownContainer"],
+        .st-key-rec_card [data-testid="stMarkdownContainer"] p { color: #FFFFFF !important; }
+        /* Top navigation -> horizontal pills, left-aligned (white default) */
+        .st-key-topnav { margin-bottom: 40px; }
+        .st-key-topnav [data-testid="stButtonGroup"] {
+            gap: 0.5rem; flex-wrap: wrap; justify-content: flex-start;
+        }
+        .st-key-topnav [data-testid="stButtonGroup"] button {
+            border-radius: 999px !important;
+            border: 1px solid #E3ECF7 !important;
+            background: #FFFFFF !important;
+            color: #0E1526 !important;
+            font-weight: 600 !important;
+            padding: 1.55rem 1.2rem !important;
+        }
+        /* Hover + current page -> black pill, white text */
+        .st-key-topnav [data-testid="stButtonGroup"] button:hover,
+        .st-key-topnav [data-testid="stButtonGroup"] button[aria-pressed="true"],
+        .st-key-topnav [data-testid="stButtonGroup"] button[aria-checked="true"],
+        .st-key-topnav [data-testid="stButtonGroup"] button[aria-selected="true"],
+        .st-key-topnav [data-testid="stButtonGroup"] button[kind="pillsActive"],
+        .st-key-topnav [data-testid="stButtonGroup"] [data-testid*="Active" i] {
+            background: #0E1526 !important;
+            border-color: #0E1526 !important;
+            color: #FFFFFF !important;
+        }
+        .st-key-topnav [data-testid="stButtonGroup"] button:hover p,
+        .st-key-topnav [data-testid="stButtonGroup"] button[aria-pressed="true"] p,
+        .st-key-topnav [data-testid="stButtonGroup"] button[aria-checked="true"] p,
+        .st-key-topnav [data-testid="stButtonGroup"] button[aria-selected="true"] p,
+        .st-key-topnav [data-testid="stButtonGroup"] button[kind="pillsActive"] p,
+        .st-key-topnav [data-testid="stButtonGroup"] [data-testid*="Active" i] p {
+            color: #FFFFFF !important;
+        }
+        /* Clip charts to a squircle (keeps the dark headline chart rounded) */
+        [data-testid="stVegaLiteChart"],
+        [data-testid="stAltairChart"] {
+            border-radius: 1.75rem;
+            overflow: hidden;
+        }
+        </style>
+        """,
+        unsafe_allow_html=True,
+    )
+
+
+def render_risk_trend_chart(cross: pd.DataFrame) -> None:
+    """Headline dark area chart — cross-domain risk score across reporting months."""
+    df = pd.DataFrame({
+        "Month": pd.to_datetime(cross["reporting_month"]),
+        "Risk Score": pd.to_numeric(cross["cross_domain_risk_score"], errors="coerce"),
+    }).dropna().sort_values("Month")
+
+    area = alt.Chart(df).mark_area(
+        interpolate="monotone",
+        line={"color": "#4DA3FF", "strokeWidth": 3},
+        color=alt.Gradient(
+            gradient="linear",
+            stops=[alt.GradientStop(color=CHART_BG, offset=0.0),
+                   alt.GradientStop(color="#2F6BFF", offset=1.0)],
+            x1=1, x2=1, y1=1, y2=0,
+        ),
+    ).encode(
+        x=alt.X("Month:T", title=None,
+                axis=alt.Axis(format="%b %y", labelColor="#9AA7BD",
+                              tickColor="#3A4356", domainColor="#3A4356", grid=False)),
+        y=alt.Y("Risk Score:Q", title=None, scale=alt.Scale(domain=[0, 100]),
+                axis=alt.Axis(labelColor="#9AA7BD", tickColor="#3A4356",
+                              domain=False, gridColor="#1E2740")),
+        tooltip=[alt.Tooltip("Month:T", format="%b %Y", title="Month"),
+                 alt.Tooltip("Risk Score:Q", title="Risk Score")],
+    ).properties(height=280)
+
+    chart = (area
+             .configure(background=CHART_BG)
+             .configure_view(strokeWidth=0, fill=CHART_BG)
+             .configure_axis(labelFontSize=12))
+    st.altair_chart(chart, use_container_width=True)
 
 
 # ──────────────────────────────────────────────────────────────────────────────
@@ -232,13 +436,18 @@ PAGES = {
 # ──────────────────────────────────────────────────────────────────────────────
 
 def page_executive_overview(data: dict) -> None:
-    st.header("📊 Executive Overview")
-
-    # ── Prototype notice ──────────────────────────────────────────────────────
-    st.caption(
-        "⚠️ Prototype based on synthetic monthly data for management decision support."
-    )
-    st.divider()
+    head_l, head_r = st.columns([3, 1])
+    with head_l:
+        st.title("Executive Overview")
+        st.caption(
+            "⚠️ Prototype based on synthetic monthly data for management decision support."
+        )
+    with head_r:
+        st.markdown(
+            f"<div style='text-align:right;padding-top:1.4rem'>"
+            f"<span class='month-pill'>Data Status: {get_latest_month(data)}</span></div>",
+            unsafe_allow_html=True,
+        )
 
     # ── Guard: require all four files ─────────────────────────────────────────
     required = ["ranking", "cross", "warning", "forecast"]
@@ -252,7 +461,6 @@ def page_executive_overview(data: dict) -> None:
     rank  = data["ranking"]
     cross = data["cross"]
     warn  = data["warning"]
-    fore  = data["forecast"]
 
     # ── Derive key values ─────────────────────────────────────────────────────
     latest_month = warn["reporting_month"].max()
@@ -265,11 +473,6 @@ def page_executive_overview(data: dict) -> None:
     mgmt_interp  = cross_row["management_interpretation"]
 
     rank1        = rank[rank["executive_rank"] == 1].iloc[0]
-
-    warn_forecasts  = int((fore["forecast_status"] == "Warning").sum())
-    crit_forecasts  = int((fore["forecast_status"] == "Critical").sum())
-    high_risk       = int((fore["forecast_risk_level"] == "High").sum())
-    crit_risk       = int((fore["forecast_risk_level"] == "Critical").sum())
 
     # ── Colour helpers ────────────────────────────────────────────────────────
     STATUS_COLOUR = {
@@ -292,32 +495,40 @@ def page_executive_overview(data: dict) -> None:
     # ══════════════════════════════════════════════════════════════════════════
     # SECTION 1 — Reporting month
     # ══════════════════════════════════════════════════════════════════════════
-    st.subheader("Reporting Period")
-    st.metric("Latest Reporting Month", latest_month)
-    st.divider()
-
     # ══════════════════════════════════════════════════════════════════════════
     # SECTION 2 — Cross-domain risk
     # ══════════════════════════════════════════════════════════════════════════
     st.subheader("Cross-Domain Risk Signal")
-    col_a, col_b, col_c = st.columns(3)
-    with col_a:
-        st.metric(
-            "Risk Score (0–100)",
-            f"{risk_score}",
-            help="Composite score across Workforce, Operations and Patient Experience domains.",
-        )
-    with col_b:
-        st.metric(
-            "Risk Level",
-            f"{RISK_COLOUR.get(risk_level, '')} {risk_level}",
-        )
-    with col_c:
-        st.metric("Signal Pattern", pattern_name)
+    st.caption("Composite risk score (0–100) across reporting months.")
+    render_risk_trend_chart(cross)
 
-    with st.container(border=True):
-        st.markdown("**Management Interpretation**")
-        st.write(mgmt_interp)
+    warn_uri = img_data_uri("warning.png")
+    st.markdown(
+        "<style>"
+        f".st-key-risk_card,.st-key-risk_card [data-testid='stVerticalBlockBorderWrapper']{{"
+        f"background-image:url('{warn_uri}') !important;background-repeat:no-repeat !important;"
+        "background-position:right -20px top -20px !important;background-size:240px !important;"
+        "min-height:240px;background-color:#fff !important;}"
+        ".st-key-risk_card [data-testid='stMetric']"
+        "{background:transparent !important;border:none !important;padding:0.35rem 0;}"
+        ".st-key-risk_card [data-testid='stMetricValue']"
+        "{white-space:normal !important;overflow-wrap:anywhere;text-wrap:auto;line-height:1.2;}"
+        "</style>",
+        unsafe_allow_html=True,
+    )
+
+    with st.container(key="risk_row"):
+        risk_col, interp_col = st.columns([1, 2])
+        with risk_col:
+            with st.container(border=True, key="risk_card"):
+                st.caption("Risk Score (0–100)")
+                st.markdown(f"## {risk_score}")
+                st.metric("Risk Level", f"{RISK_COLOUR.get(risk_level, '')} {risk_level}")
+                st.metric("Signal Pattern", pattern_name)
+        with interp_col:
+            with st.container(border=True):
+                st.markdown("### Management Interpretation")
+                st.write(mgmt_interp)
     st.divider()
 
     # ══════════════════════════════════════════════════════════════════════════
@@ -336,33 +547,33 @@ def page_executive_overview(data: dict) -> None:
         status_icon   = STATUS_COLOUR.get(row["status"], "")
         priority_icon = PRIORITY_COLOUR.get(row["alert_priority"], "")
         with cols[i % 3]:
-            with st.container(border=True):
-                st.markdown(f"**{row['kpi_name']}**")
-                st.markdown(f"Domain: *{row['domain']}*")
-                val = row["kpi_value"]
-                st.metric("Latest Value", val)
-                st.markdown(
-                    f"Status: {status_icon} **{row['status']}**  \n"
-                    f"Alert Priority: {priority_icon} **{row['alert_priority']}**"
-                )
+            st.markdown(
+                f"<div class='kpi-card'>"
+                f"<div class='kpi-title'>{row['kpi_name']}</div>"
+                f"<div class='kpi-domain'>Domain: <em>{row['domain']}</em></div>"
+                f"<div class='kpi-value'>{row['kpi_value']}</div>"
+                f"<div class='kpi-line'>Status: {status_icon} <b>{row['status']}</b></div>"
+                f"<div class='kpi-line'>Alert Priority: {priority_icon} "
+                f"<b>{row['alert_priority']}</b></div>"
+                f"</div>",
+                unsafe_allow_html=True,
+            )
     st.divider()
 
     # ══════════════════════════════════════════════════════════════════════════
     # SECTION 4 — Executive priority ranking table
     # ══════════════════════════════════════════════════════════════════════════
-    st.subheader("Executive Priority Ranking")
-    st.caption("Ranked by composite priority score as of the latest reporting month.")
+    st.subheader("Priority Ranking")
 
     table_df = rank[[
-        "executive_rank", "kpi_name", "latest_actual_status",
+        "kpi_name", "latest_actual_status",
         "executive_priority_score", "executive_priority_level",
         "ranking_driver", "recommended_scenario",
     ]].copy()
 
     table_df.columns = [
-        "Rank", "KPI", "Current Status",
-        "Priority Score", "Priority Level",
-        "Ranking Driver", "Recommended Scenario",
+        "KPI", "Current Status", "Priority Score",
+        "Priority Level", "Ranking Driver", "Recommended Scenario",
     ]
 
     # Add colour indicators to status and level
@@ -372,21 +583,14 @@ def page_executive_overview(data: dict) -> None:
     table_df["Priority Level"] = table_df["Priority Level"].apply(
         lambda l: f"{LEVEL_COLOUR.get(l, '')} {l}"
     )
-
-    st.dataframe(
-        table_df,
-        use_container_width=True,
-        hide_index=True,
-        column_config={
-            "Rank":               st.column_config.NumberColumn(width="small"),
-            "KPI":                st.column_config.TextColumn(width="medium"),
-            "Current Status":     st.column_config.TextColumn(width="medium"),
-            "Priority Score":     st.column_config.NumberColumn(width="small", format="%.1f"),
-            "Priority Level":     st.column_config.TextColumn(width="medium"),
-            "Ranking Driver":     st.column_config.TextColumn(width="large"),
-            "Recommended Scenario": st.column_config.TextColumn(width="medium"),
-        },
+    table_df["Priority Score"] = table_df["Priority Score"].map(
+        lambda v: f"{float(v):.1f}"
     )
+
+    table_html = table_df.to_html(index=False, border=0,
+                                  classes="rank-table", escape=False)
+    st.markdown(f"<div class='rank-card'>{table_html}</div>",
+                unsafe_allow_html=True)
     st.divider()
 
     # ══════════════════════════════════════════════════════════════════════════
@@ -396,45 +600,26 @@ def page_executive_overview(data: dict) -> None:
     st.caption(f"Rank 1 of 6 — {rank1['kpi_name']}")
 
     level_icon = LEVEL_COLOUR.get(rank1["executive_priority_level"], "")
-    with st.container(border=True):
-        st.markdown(
-            f"{level_icon} **Priority Level: {rank1['executive_priority_level']}**  \n"
-            f"**Priority Score:** {rank1['executive_priority_score']}"
-        )
-        st.markdown("**Executive Summary**")
-        st.write(rank1["executive_summary"])
-        st.markdown("**Recommended Management Action**")
-        st.write(rank1["recommended_management_action"])
-        st.markdown("**Recommended Scenario**")
-        st.info(rank1["recommended_scenario"])
-    st.divider()
-
-    # ══════════════════════════════════════════════════════════════════════════
-    # SECTION 6 — Forecast summary
-    # ══════════════════════════════════════════════════════════════════════════
-    st.subheader("3-Month Forecast Summary")
-    st.caption(
-        "Counts across all six KPIs over the three forecast months "
-        f"({fore['forecast_month'].min()} to {fore['forecast_month'].max()})."
+    st.markdown(
+        f"{level_icon} **Priority Level: {rank1['executive_priority_level']}** &nbsp;·&nbsp; "
+        f"**Priority Score:** {rank1['executive_priority_score']}"
     )
 
-    fc1, fc2, fc3, fc4 = st.columns(4)
-    with fc1:
-        st.metric("Warning Forecasts", warn_forecasts,
-                  help="Forecast rows where the central forecast status is Warning.")
-    with fc2:
-        st.metric("Critical Forecasts", crit_forecasts,
-                  help="Forecast rows where the central forecast status is Critical.")
-    with fc3:
-        st.metric("High Risk Forecasts", high_risk,
-                  help="Forecast rows assigned a High forecast risk level.")
-    with fc4:
-        st.metric("Critical Risk Forecasts", crit_risk,
-                  help="Forecast rows assigned a Critical forecast risk level.")
+    with st.container(key="alert_cards"):
+        sum_col, rec_col = st.columns([2, 1])
+        with sum_col:
+            with st.container(border=True):
+                st.markdown("### Executive Summary")
+                st.write(rank1["executive_summary"])
+        with rec_col:
+            with st.container(border=True, key="rec_card"):
+                st.markdown("### Recommendation")
+                st.write(rank1["recommended_management_action"])
+    st.divider()
 
 
 def page_warning_evidence(data: dict) -> None:
-    st.header("⚠️ Warning Evidence")
+    st.title("Warning Evidence")
     st.markdown(PAGES["Warning Evidence"]["description"])
     st.divider()
 
@@ -505,7 +690,7 @@ def page_warning_evidence(data: dict) -> None:
 
 
 def page_forecast(data: dict) -> None:
-    st.header("📈 Forecast")
+    st.title("Forecast")
     st.markdown(PAGES["Forecast"]["description"])
     st.divider()
 
@@ -594,7 +779,7 @@ STATUS_ICONS = {"Critical": "🔴", "Warning": "🟡", "Normal": "🟢",
 
 
 def page_scenario_lab(data: dict) -> None:
-    st.header("🔬 Scenario Lab")
+    st.title("Scenario Lab")
     st.markdown(PAGES["Scenario Lab"]["description"])
     st.divider()
 
@@ -740,7 +925,7 @@ def scan_project_files() -> dict:
 
 
 def page_data_validation(data: dict) -> None:
-    st.header("🗂️ Data & Validation")
+    st.title("Data & Validation")
     st.markdown(PAGES["Data & Validation"]["description"])
     st.divider()
     st.caption("This page is read-only: it inspects files and previews uploads. "
@@ -839,25 +1024,17 @@ PAGE_RENDERERS = {
 # ───────────────────────────────────────────────────────���──────────────────────
 
 def render_navigation() -> str:
-    """Render top navigation and return the selected page name."""
-    page_labels = [f"{v['icon']} {k}" for k, v in PAGES.items()]
-    page_names  = list(PAGES.keys())
-
-    with st.sidebar:
-        st.markdown("**Navigation**")
-        selected_label = st.radio(
+    """Render top-of-page pill navigation and return the selected page name."""
+    pages = list(PAGES.keys())
+    with st.container(key="topnav"):
+        choice = st.pills(
             label="Pages",
-            options=page_labels,
+            options=pages,
+            selection_mode="single",
+            default=pages[0],
             label_visibility="collapsed",
         )
-
-    # Strip icon prefix to get clean page name
-    selected = next(
-        (name for name, meta in PAGES.items()
-         if f"{meta['icon']} {name}" == selected_label),
-        page_names[0],
-    )
-    return selected
+    return choice or pages[0]
 
 
 # ──────────────────────────────────────────────────────────────────────────────
@@ -865,6 +1042,8 @@ def render_navigation() -> str:
 # ──────────────────────────────────────────────────────────────────────────────
 
 def main() -> None:
+    inject_theme()
+
     # Load data (cached)
     data = load_all()
 

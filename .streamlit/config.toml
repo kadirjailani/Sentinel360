@@ -1,0 +1,12 @@
+[server]
+runOnSave = true
+
+[theme]
+# Squircle, light-blue look. Colours + corner radius are native theme knobs;
+# white "floating card" fill + the dark headline chart are done in app.py.
+base = "light"
+primaryColor = "#2F6BFF"
+backgroundColor = "#E9F1FB"
+secondaryBackgroundColor = "#FFFFFF"
+textColor = "#0E1526"
+baseRadius = "1.5rem"
