@@ -302,6 +302,42 @@ def render_risk_trend_chart(cross: pd.DataFrame) -> None:
     st.altair_chart(chart, use_container_width=True)
 
 
+def render_warning_chart(df: pd.DataFrame, unit: str) -> None:
+    """Dark line chart — KPI value against the flat Warning / Critical boundaries."""
+    colors = {"KPI Value": "#4DA3FF",
+              "Warning Boundary": "#F0A202",
+              "Critical Boundary": "#FF5C5C"}
+    order = list(colors)
+    long = df.melt("Month", var_name="Series", value_name="Value")
+
+    line = alt.Chart(long).mark_line(interpolate="monotone", strokeWidth=3).encode(
+        x=alt.X("Month:T", title=None,
+                axis=alt.Axis(format="%b %y", labelColor="#9AA7BD",
+                              tickColor="#3A4356", domainColor="#3A4356", grid=False)),
+        y=alt.Y("Value:Q", title=unit,
+                axis=alt.Axis(labelColor="#9AA7BD", tickColor="#3A4356",
+                              domain=False, gridColor="#1E2740", titleColor="#9AA7BD")),
+        color=alt.Color("Series:N", sort=order,
+                        scale=alt.Scale(domain=order,
+                                        range=[colors[s] for s in order]),
+                        legend=alt.Legend(title=None, orient="top",
+                                          labelColor="#9AA7BD")),
+        strokeDash=alt.StrokeDash("Series:N", sort=order, legend=None,
+                                  scale=alt.Scale(domain=order,
+                                                  range=[[1, 0], [6, 4], [6, 4]])),
+        tooltip=[alt.Tooltip("Month:T", format="%b %Y", title="Month"),
+                 alt.Tooltip("Series:N", title="Series"),
+                 alt.Tooltip("Value:Q", title="Value")],
+    ).properties(height=280).interactive()
+
+    chart = (line
+             .configure(background=CHART_BG)
+             .configure_view(strokeWidth=0, fill=CHART_BG)
+             .configure_axis(labelFontSize=12)
+             .configure_legend(labelFontSize=12))
+    st.altair_chart(chart, use_container_width=True)
+
+
 # ──────────────────────────────────────────────────────────────────────────────
 # DATA LOADING
 # ──────────────────────────────────────────────────────────────────────────────
@@ -663,32 +699,38 @@ def page_warning_evidence(data: dict) -> None:
             .sort_values("reporting_month"))
     chart_df = pd.DataFrame({
         "Month": pd.to_datetime(hist["reporting_month"]),
-        f"KPI Value ({unit})": pd.to_numeric(hist["kpi_value"], errors="coerce"),
+        "KPI Value": pd.to_numeric(hist["kpi_value"], errors="coerce"),
         "Warning Boundary": float(latest["warning_boundary"]),
         "Critical Boundary": float(latest["critical_boundary"]),
-    })
-    st.line_chart(
-        chart_df, x="Month",
-        y=[f"KPI Value ({unit})", "Warning Boundary", "Critical Boundary"],
-        color=["#d62728", "#1f77b4", "#f0a202"],
-    )
+    }).dropna(subset=["KPI Value"])
+    render_warning_chart(chart_df, unit)
 
     # Latest evidence — values taken directly from the warning output file
     st.subheader(f"Latest Evidence — {latest['reporting_month']}")
-    row1 = st.columns(3)
-    row1[0].metric(f"KPI Value ({unit})", latest["kpi_value"])
-    row1[1].metric("Status",
-                   f"{STATUS_ICONS.get(latest['status'], '⚪')} {latest['status']}")
-    row1[2].metric("Alert Priority", latest["alert_priority"])
-    row2 = st.columns(3)
-    row2[0].metric("Anomaly Flag", latest["anomaly_flag"])
-    row2[1].metric("Consecutive Warning Months", latest["consecutive_warning_months"])
-    row2[2].metric("Deterioration Streak (months)", latest["deterioration_streak_months"])
+    left, right = st.columns(2)
 
-    st.markdown(f"**{latest['alert_title']}**")
-    st.info(latest["alert_explanation"])
-    st.markdown("**Recommended Management Attention**")
-    st.warning(latest["recommended_management_attention"])
+    with left:
+        with st.container(border=True):
+            m = st.columns(2)
+            m[0].metric(f"KPI Value ({unit})", latest["kpi_value"])
+            m[1].metric("Status",
+                        f"{STATUS_ICONS.get(latest['status'], '⚪')} {latest['status']}")
+            m = st.columns(2)
+            m[0].metric("Alert Priority", latest["alert_priority"])
+            m[1].metric("Anomaly Flag", latest["anomaly_flag"])
+            m = st.columns(2)
+            m[0].metric("Consecutive Warning Months",
+                        latest["consecutive_warning_months"])
+            m[1].metric("Deterioration Streak (months)",
+                        latest["deterioration_streak_months"])
+
+    with right:
+        with st.container(border=True):
+            st.markdown(f"#### {latest['alert_title']}")
+            st.write(latest["alert_explanation"])
+        with st.container(border=True):
+            st.markdown("#### Recommended Management Attention")
+            st.write(latest["recommended_management_attention"])
 
     # Monthly evidence table
     st.subheader("Monthly Evidence")
@@ -698,8 +740,7 @@ def page_warning_evidence(data: dict) -> None:
         lambda s: f"{STATUS_ICONS.get(s, '⚪')} {s}")
     evidence.columns = ["Reporting Month", f"KPI Value ({unit})", "Status",
                         "Trend Direction", "Anomaly Flag", "Alert Priority"]
-    st.dataframe(evidence.sort_values("Reporting Month", ascending=False),
-                 width="stretch", hide_index=True)
+    render_grid(evidence.sort_values("Reporting Month", ascending=False))
 
     st.caption(latest["analytical_limitation"])
 
@@ -772,7 +813,7 @@ def page_forecast(data: dict) -> None:
     detail.columns = ["Forecast Month", f"Forecast Value ({unit})", "Status",
                       "Projected Direction", "Risk Level", "Confidence",
                       "Threshold Crossing"]
-    st.dataframe(detail, width="stretch", hide_index=True)
+    render_grid(detail)
 
     # Narrative for the nearest forecast month
     st.markdown(f"**Forecast Message — {first['forecast_month']}**")
@@ -859,7 +900,7 @@ def page_scenario_lab(data: dict) -> None:
         "Impact": r["impact_delta"],
         "Unit": r["unit"],
     } for r in result["rows"]])
-    st.dataframe(impact_df, width="stretch", hide_index=True)
+    render_grid(impact_df)
 
     worsened = sum(1 for r in result["rows"]
                    if r["scenario_status"] != r["baseline_status"])
